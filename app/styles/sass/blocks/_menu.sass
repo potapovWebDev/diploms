@@ -1,0 +1,82 @@
+.menu
+    margin-top: 10rem
+    margin-bottom: 10000px
+    li
+        position: relative
+        list-style-type: none
+        /** &:not(&:last-child)
+            margin-right: 1px **/
+        &:hover
+            .sub-menu__list
+                display: flex
+                top: 100%
+                visibility: visible
+                /** top: 0 **/
+            .menu__icons
+                transform: rotate(180deg) translateY(50%)
+            
+    &__list
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        max-width: 79rem
+        padding: 0
+    &__item
+        width: 18rem
+        height: 10rem
+        background-color: $accent
+        padding: 1rem 1.5rem 1.5rem 1.5rem
+        position: relative
+        overflow: hidden
+    &__link
+        position: absolute
+        bottom: 1rem
+        display: inline-block
+        padding: 1rem .5rem
+        background-color: #fff
+        width: 15rem
+        
+        color: $textcolor
+        font-size: 1.2rem
+        text-decoration: none
+        &:hover
+            color: $textcolor
+            .menu__icons
+                transform: rotate(180deg) translateY(50%)
+                transition: all .3s linear
+            .sub-menu__list
+                display: flex
+
+    &__icons
+        position: absolute
+        right: 1rem
+        top: 50%
+        transform: translateY(-50%)
+        transition: all .3s linear
+
+    .sub-menu
+        &__list
+            display: none
+            visibility: hidden
+            flex-direction: columns
+            justify-content: space-between
+            padding: 0
+            position: absolute
+            top: -100%
+            transition: all .3s linear
+            li
+                width: 18rem
+        &__link
+            display: inline-block
+            padding: 1.5rem 2rem
+            font-size: 1.2rem
+            color: $accent
+            text-decoration: none
+            width: 100%
+            border-right: 1px solid $accent
+            border-bottom: 1px solid $accent
+            border-left: 1px solid $accent
+            &:hover
+                background: $accent
+                color: #fff
+                transition: all .3s linear
