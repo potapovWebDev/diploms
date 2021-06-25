@@ -1,17 +1,13 @@
 .menu
     margin-top: 10rem
-    margin-bottom: 10000px
     li
         position: relative
         list-style-type: none
-        /** &:not(&:last-child)
-            margin-right: 1px **/
         &:hover
             .sub-menu__list
                 display: flex
                 top: 100%
                 visibility: visible
-                /** top: 0 **/
             .menu__icons
                 transform: rotate(180deg) translateY(50%)
             
@@ -76,6 +72,7 @@
             border-right: 1px solid $accent
             border-bottom: 1px solid $accent
             border-left: 1px solid $accent
+            background-color: #fff
             &:hover
                 background: $accent
                 color: #fff
